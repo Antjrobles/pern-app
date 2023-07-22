@@ -1,9 +1,11 @@
 import express from "express";
 import morgan from "morgan";
+import helmet from "helmet";
 
 const app = express();
 
 app.listen(3022);
+app.use(helmet());
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
