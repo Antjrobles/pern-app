@@ -18,8 +18,8 @@ app.use(express.urlencoded({ extended: false }));
 //ROUTES
 app.get("/", (req, res) => res.json({ message: "welcome to my App" }));
 
-app.use(taskRoutes);
-app.use(authRoutes);
+app.use('/api', taskRoutes);
+app.use('/api', authRoutes);
 
 
 // Errors Handlers
