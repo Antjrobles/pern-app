@@ -1,0 +1,16 @@
+version: '3.3'
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: pern-db
+    restart: always
+    environment:
+      - POSTGRES_USER=pern
+      - POSTGRES_PASSWORD=pern
+    ports:
+      - '5422:5432'
+    volumes: 
+      - db:/var/lib/postgresql/data
+volumes:
+  db:
+    driver: local

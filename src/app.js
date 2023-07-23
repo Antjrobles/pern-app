@@ -6,7 +6,6 @@ import authRoutes from "./routes/auth.routes.js";
 const app = express();
 
 
-app.listen(3022);
 
 // MIDDLEWARES
 app.use(helmet());
